@@ -2,6 +2,20 @@
 
 An interactive Finance Analytics Dashboard developed in Microsoft Power BI to analyze financial transactions, customer behavior, transaction performance, fees, taxes, and regional trends.
 
+## Dashboard Preview
+
+### Overview Analysis
+
+<img width="1476" height="757" alt="overview-dashboard" src="https://github.com/user-attachments/assets/197ad4fa-91ca-4f64-b6a7-11dde33755a7" />
+
+
+### Transactions
+
+<img width="1372" height="710" alt="transactions-dashboard" src="https://github.com/user-attachments/assets/34a5c6b9-225f-453b-8979-2f7bb2eff55a" />
+
+
+---
+
 ## Project Overview
 
 The objective of this project is to provide a centralized analytical solution for monitoring financial transaction performance and understanding customer behavior.
@@ -17,17 +31,44 @@ The dashboard helps analyze:
 - Gender-wise transaction amount
 - Detailed transaction-level records
 
+---
+
+## Business Requirements
+
+The dashboard was developed to address the following analytical requirements:
+
+- Monitor financial transaction performance
+- Analyze monthly transaction trends
+- Understand transaction success and failure
+- Analyze customer segment contribution
+- Compare state-wise performance
+- Analyze transaction types
+- Monitor fees and taxes
+- Analyze transaction performance by gender
+- Perform year-over-year analysis
+- Provide detailed transaction-level information
+
+The complete business requirements document is available here:
+
+[View Business Requirements](Business%20Requirements.docx)
+
+---
+
 ## Dashboard Pages
 
 ### 1. Overview Analysis
 
-The Overview Analysis page provides a high-level view of financial performance through KPIs, charts, and interactive filters.
+The Overview Analysis page provides a high-level view of financial performance using KPIs, charts, and interactive filters.
 
 ### 2. Transactions
 
-The Transactions page provides detailed transaction-level records and supports deeper analysis of individual transactions.
+The Transactions page provides detailed transaction-level records for deeper analysis.
+
+---
 
 ## Key KPIs
+
+The dashboard includes the following key performance indicators:
 
 - Total Amount
 - Total Transactions
@@ -36,47 +77,120 @@ The Transactions page provides detailed transaction-level records and supports d
 - Total Tax
 - Year-over-Year (YoY) comparison
 
+---
+
 ## Interactive Filters
 
-The dashboard includes filters for:
+Users can interact with the dashboard using:
 
 - Year
 - Dynamic Metrics
 - Occupation
 - Merchant Category
 
+---
+
 ## Dashboard Visualizations
+
+### Financial Performance
 
 - Total Amount by Month
 - Total Amount by Transaction Status
 - Total Amount by Customer Segment
 - Total Amount by State
-- Transaction Type Analysis
 - Total Amount by Gender
-- Detailed transaction table
 
-## Data
+### Transaction Analysis
 
-The project uses sample financial transaction and customer datasets.
+The Transaction Type Analysis provides:
 
-### Customer Data
+- Transaction Amount
+- Transaction Fees
+- Transaction Tax
+- Transaction Count
 
-Contains customer-related information such as:
+### Detailed Transactions
+
+The Transactions page provides detailed records including:
+
+- Transaction ID
+- Transaction Date
+- Customer Name
+- Transaction Type
+- Transaction Status
+- Gender
+- Customer Segment
+- State
+- Total Amount
+- Total Fees
+- Total Tax
+
+---
+
+## Data Preparation
+
+Power Query was used to prepare the data before dashboard development.
+
+The data preparation process included:
+
+- Data type validation
+- Text cleaning
+- Handling missing values
+- Column preparation
+- Combining customer and transaction information
+- Preparing fields required for analysis
+
+---
+
+## DAX & Time Intelligence
+
+DAX measures were created for the main financial metrics and time-based analysis.
+
+The project includes calculations for:
+
+- Total Amount
+- Total Fees
+- Total Tax
+- Total Transactions
+- Average Transaction Value
+- Previous Year Amount
+- Year-over-Year analysis
+
+A calendar table was used to support time-intelligence calculations.
+
+---
+
+## Dynamic Metrics
+
+A Power BI Field Parameter was used to allow users to dynamically switch between selected financial measures within the dashboard.
+
+This allows the same visual to display different metrics based on the user's selection.
+
+---
+
+## Data Model
+
+The project uses two primary datasets:
+
+### Customer Dataset
+
+Contains customer information such as:
 
 - Customer ID
-- Customer Name
-- Date of Birth
+- First Name
+- Second Name
 - Gender
-- Annual Income
-- Occupation
+- Date of Birth
 - City
 - State
+- Occupation
 - Customer Segment
+- Annual Income
 - Join Date
 
-### Transaction Data
+### Financial Transactions Dataset
 
-Contains transaction-related information such as:
+Contains transaction information such as:
 
 - Transaction ID
 - Transaction Date
@@ -94,35 +208,9 @@ Contains transaction-related information such as:
 - Risk Score
 - Reference Number
 
-## Data Preparation
+The datasets are connected using `customer_id`.
 
-Power Query was used for data cleaning and transformation before building the dashboard.
-
-The data preparation process included:
-
-- Data type validation
-- Text cleaning
-- Handling missing values
-- Column preparation
-- Data integration between customer and transaction data
-
-## DAX & Time Intelligence
-
-DAX measures were created for key financial metrics and time-based analysis.
-
-The project includes:
-
-- Total Amount
-- Total Fees
-- Total Tax
-- Total Transactions
-- Previous Year Amount
-- Year-over-Year analysis
-- Dynamic metric selection
-
-## Dynamic Metrics
-
-A Field Parameter was used to allow users to dynamically switch between selected financial measures within the dashboard.
+---
 
 ## Tools Used
 
@@ -132,14 +220,26 @@ A Field Parameter was used to allow users to dynamically switch between selected
 - Microsoft Excel
 - GitHub
 
+---
+
 ## Repository Structure
 
 ```text
 finance-analytics-powerbi-dashboard/
 │
-├── README.md
-├── Business Requirements/
 ├── Data/
+│   ├── customers.csv
+│   └── finance_transactions.csv
+│
+├── Documentation/
+│   └── data-dictionary.md
+│
 ├── Power BI/
+│   └── Financial_dashboard.pbix
+│
 ├── Screenshots/
-└── Documentation/
+│   ├── overview-dashboard.png
+│   └── transactions-dashboard.png
+│
+├── Business Requirements.docx
+└── README.md
