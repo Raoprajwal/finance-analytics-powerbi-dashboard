@@ -8,11 +8,9 @@ An interactive Finance Analytics Dashboard developed in Microsoft Power BI to an
 
 <img width="1476" height="757" alt="overview-dashboard" src="https://github.com/user-attachments/assets/197ad4fa-91ca-4f64-b6a7-11dde33755a7" />
 
-
 ### Transactions
 
 <img width="1372" height="710" alt="transactions-dashboard" src="https://github.com/user-attachments/assets/34a5c6b9-225f-453b-8979-2f7bb2eff55a" />
-
 
 ---
 
@@ -50,7 +48,7 @@ The dashboard was developed to address the following analytical requirements:
 
 The complete business requirements document is available here:
 
-[View Business Requirements](Business%20Requirements.docx)
+[View Business Requirements](https://github.com/Raoprajwal/finance-analytics-powerbi-dashboard/blob/main/Business%20Requirements.docx)
 
 ---
 
@@ -243,3 +241,22 @@ finance-analytics-powerbi-dashboard/
 │
 ├── Business Requirements.docx
 └── README.md
+```
+
+---
+
+## Project Files
+
+- [Download Power BI Dashboard](https://github.com/Raoprajwal/finance-analytics-powerbi-dashboard/blob/main/Power%20BI/Financial_dashboard.pbix)
+- [View Customer Dataset](https://github.com/Raoprajwal/finance-analytics-powerbi-dashboard/blob/main/Data/customers.csv)
+- [View Transaction Dataset](https://github.com/Raoprajwal/finance-analytics-powerbi-dashboard/blob/main/Data/finance_transactions.csv)
+- [View Business Requirements](https://github.com/Raoprajwal/finance-analytics-powerbi-dashboard/blob/main/Business%20Requirements.docx)
+- [View Data Dictionary](https://github.com/Raoprajwal/finance-analytics-powerbi-dashboard/blob/main/Documentation/data-dictionary.md)
+
+---
+
+## Disclaimer
+
+This is a learning and portfolio project using sample data.
+
+The datasets do not represent real customer information or confidential data from any financial institution.
